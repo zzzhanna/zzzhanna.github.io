@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhanna</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Container for the images */
+  .image-gallery {
+    display: grid;
+    gap: 10px;
+  }
+
+  /* Ensures each image fills the container in phone view */
+  .image-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .outer-div {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image6.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 10px black solid;
+  }
+
+  .outer-div::before {
+    content: "Ж";
+    font-size: 5em;
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+  }
+
+  /* Centered div with "Жанна" text */
+  .center-div {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  /* Media query for larger screens */
+  @media (min-width: 600px) {
+    .image-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="outer-div">
+  <div class="center-div">Жанна</div>
+</div>
+<div class="image-gallery">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
+  <img src="image4.jpg">
+  <img src="image5.jpg">
+  <img src="image1.jpeg">
+</div>
+
+</body>
+</html>
